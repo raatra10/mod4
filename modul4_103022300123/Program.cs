@@ -1,7 +1,13 @@
-﻿internal class Program
+﻿using System;
+
+class program
 {
-    private static void Main(string[] args)
+    static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        Console.Write("Masukkan nama produk: ");
+        string produk = Console.ReadLine();
+
+        string kodeBarang = KodeProduk.GetKodeProduk(produk);
+        Console.WriteLine($"Kode Barang {produk}: {kodeBarang}");
     }
 }
